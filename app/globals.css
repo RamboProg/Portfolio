@@ -1,0 +1,47 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+:root {
+  --background: 241 51% 22%;
+  --foreground: 225 25% 77%;
+  --card: 231 27% 45%;
+  --card-foreground: 225 25% 77%;
+  --popover: 241 51% 22%;
+  --popover-foreground: 225 25% 77%;
+  --primary: 227 62% 10%;
+  --primary-foreground: 225 25% 77%;
+  --secondary: 241 51% 22%;
+  --secondary-foreground: 225 25% 77%;
+  --muted: 231 27% 45%;
+  --muted-foreground: 225 25% 77%;
+  --accent: 242 35% 67%;
+  --accent-foreground: 241 51% 22%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 225 25% 77%;
+  --border: 231 27% 45%;
+  --input: 231 27% 45%;
+  --ring: 242 35% 67%;
+  --radius: 0.5rem;
+}
+
+.card-glow {
+  box-shadow: 0 0 30px -5px rgba(146, 144, 195, 0.3);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 40px -5px rgba(146, 144, 195, 0.5);
+}
+
+.icon-glow {
+  filter: drop-shadow(0 0 12px rgba(146, 144, 195, 0.5));
+}
+
+.button-glow {
+  box-shadow: 0 0 20px -5px rgba(7, 15, 43, 0.5);
+}
+
+.button-glow:hover {
+  box-shadow: 0 0 30px -5px rgba(7, 15, 43, 0.7);
+}
+
