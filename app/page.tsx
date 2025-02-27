@@ -332,7 +332,6 @@ export default function Home() {
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     type="submit"
-                    //when this button is clicked, it will send the message to this email: m.ismail.official23@gmail.com without opening any external page or app
                     className="w-full transition-all duration-300 hover:shadow-lg hover:button-glow"
                   >
                     Send Message
