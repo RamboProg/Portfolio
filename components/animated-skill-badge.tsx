@@ -25,7 +25,7 @@ export default function AnimatedSkillBadge({ name, level, index }: SkillBadgePro
         transition: { duration: 0.2 },
       }}
     >
-      <Card className="overflow-hidden transition-all duration-300 card-glow dark:bg-card/90">
+      <Card className="overflow-hidden transition-all duration-300 hover:card-glow dark:bg-card/80">
         <CardContent className="p-4">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">

@@ -32,7 +32,7 @@ export default function AnimatedExperienceItem({
         ease: "easeOut",
       }}
     >
-      <Card className="border-l-4 border-l-primary transition-all duration-300 card-glow dark:bg-card/90">
+      <Card className="border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg hover:card-glow dark:bg-card/80">
         <CardHeader>
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
             <div>

@@ -39,7 +39,7 @@ export default function AnimatedProjectCard({
       }}
       whileHover={{ y: -5 }}
     >
-      <Card className="overflow-hidden flex flex-col h-full group transition-all duration-300 card-glow dark:bg-card/90">
+      <Card className="overflow-hidden flex flex-col h-full group transition-all duration-300 hover:card-glow dark:bg-card/80">
         <div className="relative h-48 w-full overflow-hidden">
           <Image
             src={imageUrl || "/placeholder.svg"}
@@ -66,14 +66,14 @@ export default function AnimatedProjectCard({
             variant="outline"
             size="sm"
             asChild
-            className="transition-all duration-300 hover:bg-primary hover:text-primary-foreground button-glow"
+            className="transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:button-glow"
           >
             <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
               Code
             </Link>
           </Button>
-          <Button size="sm" asChild className="transition-all duration-300 hover:scale-105 button-glow">
+          <Button size="sm" asChild className="transition-all duration-300 hover:scale-105 hover:button-glow">
             <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />
               Live Demo
