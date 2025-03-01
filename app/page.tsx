@@ -200,6 +200,7 @@ and storing data."
           </div>
         </section>
 
+
         {/* Experience Section */}
         <section id="experience" className="py-12 md:py-24 scroll-mt-16">
           <AnimatedText as="h2" className="text-3xl font-bold mb-12 text-center">
