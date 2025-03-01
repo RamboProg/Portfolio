@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiMysql, SiMongodb, SiDocker, SiAmazonwebservices, SiNestjs, SiFirebase, SiApachekafka, SiVuedotjs, SiExpress, SiPostgresql, SiDotnet, SiCplusplus, SiPython } from 'react-icons/si'
 
 interface SkillBadgeProps {
   name: string
@@ -9,46 +10,44 @@ interface SkillBadgeProps {
   index: number
 }
 
-export default function AnimatedSkillBadge({ name, level, index }: SkillBadgeProps) {
+// Update the technologyIcons object with all stacks
+const technologyIcons: Record<string, JSX.Element> = {
+  JavaScript: <SiJavascript />,
+  'Next.js': <SiNextdotjs />,
+  'React.js': <SiReact />,
+  HTML5: <SiHtml5 />,
+  CSS: <SiCss3 />,
+  Nodejs: <SiNodedotjs />,
+  Express: <SiExpress />,
+  Tailwind: <SiTailwindcss />,
+  Mongodb: <SiMongodb />,
+  PostgreSQL: <SiPostgresql />,
+  Firebase: <SiFirebase />,
+  Git: <SiGit />,
+  MySQL: <SiMysql />,
+  Docker: <SiDocker />,
+  AWS: <SiAmazonwebservices />,
+  'Nest.js': <SiNestjs />,
+  Kafka: <SiApachekafka />,
+  'Vue.js': <SiVuedotjs />,
+  'Express.js': <SiExpress />,
+  'ASP.NET': <SiDotnet />,
+  'C#': <span>C#</span>,
+  Java: <span>Java</span>,
+  Python: <SiPython />,
+  'C++': <SiCplusplus />,
+};
+
+export default function SkillIcons() {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{
-        duration: 0.3,
-        delay: index * 0.05,
-        ease: "easeOut",
-      }}
-      whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.2 },
-      }}
-    >
-      <Card className="overflow-hidden transition-all duration-300 hover:card-glow dark:bg-card/80">
-        <CardContent className="p-4">
-          <div className="flex flex-col gap-2">
-            <div className="flex justify-between items-center">
-              <span className="font-medium">{name}</span>
-              <span className="text-sm text-muted-foreground">{level}%</span>
-            </div>
-            <div className="w-full bg-muted rounded-full h-2.5 overflow-hidden">
-              <motion.div
-                className="bg-primary h-2.5 rounded-full"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${level}%` }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: index * 0.05 + 0.3,
-                  ease: "easeOut",
-                }}
-              />
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-    </motion.div>
-  )
+    <div className="grid grid-cols-3 md:grid-cols-6 gap-4 p-4 bg-light rounded-lg">
+      {Object.entries(technologyIcons).map(([name, icon]) => (
+        <div key={name} className="flex flex-col justify-center items-center bg-light bg-indigo-900 p-4 rounded-lg shadow-md">
+          <div className="text-4xl mb-2">{icon}</div>
+          <span className="text-dark text-sm">{name}</span>
+        </div>
+      ))}
+    </div>
+  );
 }
 

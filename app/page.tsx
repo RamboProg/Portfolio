@@ -11,6 +11,7 @@ import AnimatedSkillBadge from "@/components/animated-skill-badge"
 import AnimatedProjectCard from "@/components/animated-project-card"
 import AnimatedExperienceItem from "@/components/animated-experience-item"
 import { ThemeToggle } from "@/components/theme-toggle"
+import SkillIcons from "../components/animated-skill-badge"
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="relative w-24 h-24 md:w-32 md:h-32 mb-6 rounded-full overflow-hidden border-4 border-primary"
           >
-            <Image src="/placeholder.svg?height=128&width=128" alt="Profile" fill className="object-cover" priority />
+            <Image src="/professional_me_cropped.jpg?height=256&width=256" alt="Profile" fill className="object-cover" priority />
           </motion.div>
           <AnimatedText as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4" delay={0.2}>
             Hi, I'm <span className="text-primary">Mohamed Ismail</span>
@@ -103,15 +104,15 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-12 md:py-24 scroll-mt-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <section id="about" className="py-12 justify-center md:py-24 scroll-mt-16">
+          <div className="justify-center md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-muted-foreground mb-4">
-              Passionate software engineer with a love for problem-solving, 
-              clean architecture, and building engaging digital experiences. 
-              Always exploring new technologies and refining skills, striving for both efficiency and creativity.
-              Values direct communication, practical solutions, and continuous growth.
+                Passionate software engineer with a love for problem-solving,
+                clean architecture, and building engaging digital experiences.
+                Always exploring new technologies and refining skills, striving for both efficiency and creativity.
+                Values direct communication, practical solutions, and continuous growth.
               </p>
               <p className="text-muted-foreground mb-4">
                 My journey in software development began during my highschool years, and since then, I've worked on
@@ -122,37 +123,15 @@ export default function Home() {
                 and enjoying outdoor activities.
               </p>
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <motion.div
-                className="relative h-[400px] rounded-lg overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Image src="/placeholder.svg?height=400&width=600" alt="About Me" fill className="object-cover" />
-              </motion.div>
-            </AnimatedSection>
           </div>
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-12 md:py-24 scroll-mt-16">
+        <section id="skills" className="py-12 scroll-mt-16">
           <AnimatedText as="h2" className="text-3xl font-bold mb-12 text-center">
             My Skills
           </AnimatedText>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <AnimatedSkillBadge name="JavaScript" level={90} index={0} />
-            <AnimatedSkillBadge name="TypeScript" level={85} index={1} />
-            <AnimatedSkillBadge name="React" level={90} index={2} />
-            <AnimatedSkillBadge name="Next.js" level={85} index={3} />
-            <AnimatedSkillBadge name="Node.js" level={80} index={4} />
-            <AnimatedSkillBadge name="HTML/CSS" level={95} index={5} />
-            <AnimatedSkillBadge name="Tailwind CSS" level={90} index={6} />
-            <AnimatedSkillBadge name="Git" level={85} index={7} />
-            <AnimatedSkillBadge name="SQL" level={75} index={8} />
-            <AnimatedSkillBadge name="MongoDB" level={70} index={9} />
-            <AnimatedSkillBadge name="Docker" level={65} index={10} />
-            <AnimatedSkillBadge name="AWS" level={60} index={11} />
-          </div>
+          <SkillIcons />
         </section>
 
         {/* Projects Section */}
@@ -280,9 +259,9 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <form
-              action="https://formsubmit.co/m.ismail.official23@gmail.com" 
-              method="POST" 
-              className="space-y-4">
+                action="https://formsubmit.co/m.ismail.official23@gmail.com"
+                method="POST"
+                className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
