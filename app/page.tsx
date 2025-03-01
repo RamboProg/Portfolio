@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <Link href="https://github.com/RamboProg" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="hover:text-primary transition-colors group">
                 <Github className="h-5 w-5 transition-all duration-300 group-hover:icon-glow" />
@@ -141,31 +141,61 @@ export default function Home() {
           </AnimatedText>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatedProjectCard
-              title="E-Commerce Platform"
-              description="A full-stack e-commerce application with user authentication, product management, and payment processing."
-              technologies={["React", "Node.js", "MongoDB", "Stripe"]}
-              imageUrl="/placeholder.svg?height=300&width=500"
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
+              title="Marvel Ultimate Game"
+              description="Marvel Ultimate War is a 2-player battle game"
+              technologies={["Java", "javaSwing", "Team Memebers: 3"]}
+              imageUrl="/marvelultimatewar.png?height=300&width=500"
+              githubUrl="https://github.com/RamboProg/WarGameMarvel"
+              liveUrl=""
               index={0}
             />
             <AnimatedProjectCard
-              title="Task Management App"
-              description="A responsive task management application with drag-and-drop functionality, user roles, and real-time updates."
-              technologies={["Next.js", "TypeScript", "Prisma", "Socket.io"]}
-              imageUrl="/placeholder.svg?height=300&width=500"
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
+              title="Mario Board Game"
+              description="A C++ Super Mario game. It runs on the computer’s command-line interface."
+              technologies={["C++", "Team Memebers: 3"]}
+              imageUrl="/mario.png?height=300&width=500"
+              githubUrl="https://github.com/standsuser/mario-cpp"
+              liveUrl=""
               index={1}
             />
             <AnimatedProjectCard
-              title="Portfolio Website"
-              description="A modern portfolio website built with Next.js and Tailwind CSS, featuring responsive design and animations."
-              technologies={["Next.js", "Tailwind CSS", "Framer Motion"]}
-              imageUrl="/placeholder.svg?height=300&width=500"
-              githubUrl="https://github.com"
-              liveUrl="https://example.com"
+              title="Cairo Metro System"
+              description="Developed a full-stack web application for reserving metro tickets, implementing a role-based access 
+control (RBAC) system to manage station additions, removals, and administrative functions."
+              technologies={["ASP.NET", "C#", "Postgress", "Express.js", "React.js", "Team Memebers: 10"]}
+              imageUrl="/metro.png?height=300&width=500"
+              githubUrl="https://github.com/RamboProg/Ticket-Reserving-System"
+              liveUrl=""
               index={2}
+            />
+            <AnimatedProjectCard
+              title="Help Desk"
+              description=" Engineered a smart ticketing system to prioritize and track support queries, leveraging MongoDB for 
+robust data storage and retrieval. "
+              technologies={["MongoDB", "Express", "React.js", "Node.js", "Team Memebers: 7"]}
+              imageUrl="/helpdesk.png"
+              githubUrl="https://github.com/RamboProg/Help-Desk"
+              liveUrl="https://helpdesk-metro.vercel.app/"
+              index={3}
+            />
+            <AnimatedProjectCard
+              title="E-Commerce for Plastic Pallets"
+              description="Developed a scalable e-commerce platform with a microservices architecture."
+              technologies={["Next.js", "Nest.js", "Typescript", "MongoDB", "Kafka", "Payment Gateway", "Team Memebers: 3"]}
+              imageUrl="/palettes.png?height=300&width=500"
+              githubUrl="https://github.com/Omarhosny366/E-Commerce-Platform-main"
+              liveUrl=""
+              index={4}
+            />
+            <AnimatedProjectCard
+              title="Mobile E-Shop"
+              description="A Flutter app utilizing flutter providers and tools, featuring a simple UI. Firebase is used for handling 
+and storing data."
+              technologies={["Firebase", "Firestore", "Emulators", "Dart", "Team Memebers: 5"]}
+              imageUrl="/eshop.png?height=300&width=500"
+              githubUrl="https://github.com/MohamedYProg/MobileDev"
+              liveUrl=""
+              index={5}
             />
           </div>
         </section>
@@ -177,28 +207,31 @@ export default function Home() {
           </AnimatedText>
           <div className="space-y-8">
             <AnimatedExperienceItem
-              title="Senior Software Engineer"
-              company="Tech Solutions Inc."
-              period="2021 - Present"
-              description="Lead the development of web applications using React and Node.js. Implemented CI/CD pipelines and mentored junior developers."
-              technologies={["React", "Node.js", "AWS", "Docker"]}
+              title="Software Developer"
+              company="Develo Systems"
+              period="Jan 2025 - Present"
+              description="Full-stack web and app development dealing with various stacks and modern technologies. Attend client meetings, gather requirements and successfully achieve the clients' needs."
+              technologies={["HTML", "CSS", "JavaScript", "Firebase", "Git", "Tailwind", "Next.js", "Nest.js", "Node", "TypeScript", "+ more"]}
+              index={2}
+            />
+            <AnimatedExperienceItem
+              title="Player Mechanics Team Lead"
+              company="GMind"
+              period="July 2023 - Oct 2023"
+              description={`Collaborated with GMind's player mechanics development team.\nContributed to the development of game features and functionality using Unity.\nTested and debugged game code to ensure smooth gameplay.`}
+              technologies={["Unity", "C#", "Git"]}
               index={0}
             />
             <AnimatedExperienceItem
-              title="Software Developer"
-              company="Digital Innovations"
-              period="2018 - 2021"
-              description="Developed and maintained multiple client websites and applications. Collaborated with design and product teams to deliver high-quality solutions."
-              technologies={["JavaScript", "React", "Express", "MongoDB"]}
+              title="CS Junior Teaching Assistant"
+              company="German International University"
+              period="March 2023 - July 2023"
+              description="Assisted in delivering computer science lessons. 
+                            Supported undergraduate students in understanding complex problems. 
+                            Contributed to the development and improvement of curriculum materials. 
+                            Provided technical support for student projects."
+              technologies={["Java", "JavaSwing"]}
               index={1}
-            />
-            <AnimatedExperienceItem
-              title="Junior Developer"
-              company="WebCraft Studios"
-              period="2016 - 2018"
-              description="Assisted in the development of responsive websites and implemented UI components based on design specifications."
-              technologies={["HTML", "CSS", "JavaScript", "jQuery"]}
-              index={2}
             />
           </div>
         </section>
@@ -222,7 +255,7 @@ export default function Home() {
                 >
                   <Mail className="h-5 w-5 text-primary transition-all duration-300 hover:icon-glow" />
                   <a href="mailto:your.email@example.com" className="hover:text-primary transition-colors">
-                    m.ismail.official23@gmail.com
+                    mohamed.ismail.contact@gmail.com
                   </a>
                 </motion.div>
                 <motion.div
@@ -259,7 +292,7 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <form
-                action="https://formsubmit.co/m.ismail.official23@gmail.com"
+                action="https://formsubmit.co/mohamed.ismail.contact@gmail.com"
                 method="POST"
                 className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -332,7 +365,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <motion.div whileHover={{ y: -3 }}>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/RamboProg" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="hover:text-primary transition-colors group">
                   <Github className="h-5 w-5 transition-all duration-300 group-hover:icon-glow" />
                   <span className="sr-only">GitHub</span>
@@ -340,7 +373,7 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.div whileHover={{ y: -3 }}>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://linkedin.com/in/mohamedismailcs" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="hover:text-primary transition-colors group">
                   <Linkedin className="h-5 w-5 transition-all duration-300 group-hover:icon-glow" />
                   <span className="sr-only">LinkedIn</span>
@@ -348,7 +381,7 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.div whileHover={{ y: -3 }}>
-              <Link href="mailto:your.email@example.com">
+              <Link href="mailto:mohamed.ismail.contact@gmail.com">
                 <Button variant="ghost" size="icon" className="hover:text-primary transition-colors group">
                   <Mail className="h-5 w-5 transition-all duration-300 group-hover:icon-glow" />
                   <span className="sr-only">Email</span>

@@ -36,11 +36,12 @@ const technologyIcons: Record<string, JSX.Element> = {
   Java: <span>Java</span>,
   Python: <SiPython />,
   'C++': <SiCplusplus />,
+  Unity: <span>Unity</span>, // Placeholder for Unity icon
 };
 
 export default function SkillIcons() {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-4 p-4 bg-light rounded-lg">
+    <div className="grid grid-cols-3 md:grid-cols-5 gap-4 p-4 bg-light rounded-lg">
       {Object.entries(technologyIcons).map(([name, icon]) => (
         <div key={name} className="flex flex-col justify-center items-center bg-light bg-indigo-900 p-4 rounded-lg shadow-md">
           <div className="text-4xl mb-2">{icon}</div>
