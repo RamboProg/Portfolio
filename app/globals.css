@@ -1,9 +1,14 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --border: 214.3 31.8% 91.4%; /* Fix missing border variable */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -27,10 +32,6 @@
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
   }
@@ -68,7 +69,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border)); /* Fix applied */
   }
   body {
     @apply bg-background text-foreground;
@@ -83,7 +84,8 @@
   }
 
   .glow-effect::before {
-    @apply content-[''] absolute -inset-1 bg-accent/20 rounded-lg blur-xl transition-all duration-300 opacity-0;
+    @apply content-[''] absolute -inset-1 rounded-lg blur-xl transition-all duration-300 opacity-0;
+    background-color: var(--accent);
   }
 
   .glow-effect:hover::before {
@@ -91,19 +93,23 @@
   }
 
   .icon-glow {
-    filter: drop-shadow(0 0 0.5rem theme("colors.accent.DEFAULT"));
+    filter: drop-shadow(0 0 0.5rem var(--accent));
   }
 
   .card-glow {
-    box-shadow: 0 0 2rem -0.5rem theme("colors.accent.DEFAULT");
+    box-shadow: 0 0 2rem -0.5rem var(--accent);
   }
 
   .text-glow {
-    text-shadow: 0 0 1rem theme("colors.accent.DEFAULT");
+    text-shadow: 0 0 1rem var(--accent);
   }
 
   .button-glow {
-    box-shadow: 0 0 1rem -0.2rem theme("colors.primary.DEFAULT");
+    box-shadow: 0 0 1rem -0.2rem var(--primary);
   }
-}
 
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  
+}
