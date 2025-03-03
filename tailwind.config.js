@@ -21,7 +21,7 @@ module.exports = {
         border: "hsl(var(--border, 214.3 31.8% 91.4%))", // Added fallback
         input: "hsl(var(--input, 214.3 31.8% 91.4%))",
         ring: "hsl(var(--ring, 221.2 83.2% 53.3%))",
-        background: "hsl(var(--background, 0 0% 100%))", // Fixed background fallback
+        background: '#663FDBFF', // Add your color value here
         foreground: "hsl(var(--foreground, 222.2 84% 4.9%))",
         primary: {
           DEFAULT: "hsl(var(--primary, 221.2 83.2% 53.3%))",
@@ -70,4 +70,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 };
